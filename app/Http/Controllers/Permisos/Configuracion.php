@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Http\Controllers\Permisos;
+
+use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
+use App\Http\Controllers\Controller;
+use Spatie\Permission\Models\Permission;
+
+class Configuracion extends Controller
+{
+    //Creamos un perfil dentro del sistema
+    public function createRole($role){
+        return Role::create(['name' => $role]);
+    }
+
+    //Creamos un permiso dentro del sistema
+    public function createPermiso($permiso){
+        return Permission::create(['name' => $permiso ]);
+    }
+}
