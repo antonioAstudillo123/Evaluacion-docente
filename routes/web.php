@@ -10,7 +10,7 @@ Route::get('/', function () {
 
 Auth::routes(
     [
-        'register' => false,
+        'register' => true,
         'reset' => false,
     ]
 
