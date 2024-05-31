@@ -19,6 +19,12 @@ return new class extends Migration
             $table->unsignedBigInteger('id_materia');
             $table->boolean('contestada');
             $table->timestamps();
+
+
+            $table->foreign('id_alumno')->references('id')->on('alumnos');
+            $table->foreign('id_grupo')->references('id')->on('grupos');
+            $table->foreign('id_docente')->references('id')->on('docentes');
+            $table->foreign('id_materia')->references('id')->on('materias');
         });
     }
 

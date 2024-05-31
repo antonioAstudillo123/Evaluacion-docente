@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('preguntas', function (Blueprint $table) {
             $table->id();
             $table->string('pregunta');
-            $table->boolean('estatus');
+            $table->boolean('estatus')->default(true);
             $table->timestamps();
         });
     }
