@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Permisos;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use App\Http\Controllers\Controller;
@@ -17,5 +18,13 @@ class Configuracion extends Controller
     //Creamos un permiso dentro del sistema
     public function createPermiso($permiso){
         return Permission::create(['name' => $permiso ]);
+    }
+
+    //Le asignamos a un usuario un role
+    public function assignRoleUser($user , $role)
+    {
+        $user = User::find($user);
+        return $user->assignRole($role);
+
     }
 }

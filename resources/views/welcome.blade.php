@@ -39,7 +39,7 @@
                                         <h6 class="fw-normal mb-3 pb-2" style="letter-spacing: 1px;">Tu voz importa. ¡Ayúdanos a mejorar tus cursos compartiendo tus pensamientos y sugerencias!</h6>
 
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="form2Example17">Usuario / ID pwc</label>
+                                            <label class="form-label" for="email">Usuario / ID pwc</label>
                                             <input id="email" placeholder="000008807" class="form-control form-control-lg @error('email') is-invalid @enderror"   type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                             @error('email')
                                                 <span class="invalid-feedback" role="alert">
@@ -49,7 +49,7 @@
                                         </div>
 
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="form2Example27">Contraseña</label>
+                                            <label class="form-label" for="password">Contraseña</label>
                                             <input id="password" type="password" placeholder="*********" class="form-control form-control-lg @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                         </div>
 
