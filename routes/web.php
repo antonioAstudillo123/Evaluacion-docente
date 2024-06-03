@@ -37,7 +37,7 @@ Route::middleware(['auth'])->group(function()
         Route::controller(Evaluacion::class)->group(function(){
             Route::post('/respuestas' , 'respuestas');
             Route::post('/preguntas' , 'preguntas');
-            Route::post('/evaluacion/contestada' , 'contestada')->name('evaluacion.contestada');
+            Route::post('/contestada' , 'contestada')->name('evaluacion.contestada');
         });
     });
 });

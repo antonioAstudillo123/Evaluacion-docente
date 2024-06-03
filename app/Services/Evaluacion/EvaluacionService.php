@@ -47,7 +47,7 @@ class EvaluacionService
         } catch (Exception $e) {
             // Deshace la transacción en caso de error
             DB::rollBack();
-            // Maneja la excepción (por ejemplo, registrarla o mostrar un mensaje)
+
             return false;
         }
 

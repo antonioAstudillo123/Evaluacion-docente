@@ -27,7 +27,7 @@ class EvaluacionRepository
                 'hora' => Carbon::now(),
                 'total_puntos' => $totalPuntos,
                 'comentarios' => $comentarios,
-                'estatus' => true
+                'estatus' => true,
             ]
         );
 
@@ -40,7 +40,8 @@ class EvaluacionRepository
             [
                 'id_evaluacion_contestada' => $idEvaluacion,
                 'id_pregunta' => $idPregunta,
-                'id_respuesta' => $idRespuesta
+                'id_respuesta' => $idRespuesta,
+                'created_at' => Carbon::now()
             ]
         );
     }
