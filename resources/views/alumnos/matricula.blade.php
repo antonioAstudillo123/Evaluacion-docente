@@ -31,8 +31,8 @@
                 <tbody>
                     @foreach ($matricula as $row )
                         <tr class="text-center shadow-sm p-5 mb-5 bg-body rounded">
-                            <td class="">{{ $row->nombre_completo }}</td>
-                            <td class="fw-bold">{{ $row->descripcion }}</td>
+                            <td id="nombre_{{$row->id}}">{{ $row->nombre_completo }}</td>
+                            <td id="materia_{{ $row->id }}"  class="fw-bold">{{ $row->descripcion }}</td>
                             @if($row->contestada)
                                 <td>
                                     <button class="btn btn-light" disabled>Evaluar</button>
@@ -61,7 +61,17 @@
 <div id="evaluacionDiv" class="d-none">
 
     <div class="container">
-        <form action="{{ route('evaluacion.contestada') }}" method="post">
+
+        <div class="card mb-3">
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p id="textMateriaP">Fundamentos de programación.</p>
+                <footer class="blockquote-footer"><cite id='textDocenteP'>Antonio Astudillo</cite></footer>
+              </blockquote>
+            </div>
+        </div>
+
+        <form id="idFormEvaluacion" action="{{ route('evaluacion.contestada') }}" method="post">
             @csrf
             <input type="hidden" id="idMatricula" name="idMatricula">
             @foreach ($preguntas as $pregunta )
